@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Goals BMI</string>
+    <string name="title_activity_main">Goals BMI</string>
+    <string name="package_name">com.yawar.goalsbmi</string>
+    <string name="custom_url_scheme">com.yawar.goalsbmi</string>
+</resources>
