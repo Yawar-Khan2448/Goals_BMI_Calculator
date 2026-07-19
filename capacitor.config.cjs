@@ -1,0 +1,6 @@
+module.exports = {
+  appId: 'com.yawar.goalsbmi',
+  appName: 'Goals BMI',
+  webDir: 'dist',
+  bundledWebRuntime: false
+}
