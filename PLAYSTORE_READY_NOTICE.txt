@@ -1,0 +1,10 @@
+This is a Play Store preparation package, not a guarantee of acceptance.
+The final publisher must:
+- build and sign the AAB,
+- verify current Google Play target SDK requirements,
+- provide a publicly accessible privacy policy URL when required,
+- complete Data Safety and content rating declarations truthfully,
+- upload required screenshots and store assets,
+- test the final release binary.
+
+Never include your private signing keystore/password in a shared ZIP.

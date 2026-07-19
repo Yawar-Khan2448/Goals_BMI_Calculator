@@ -1,0 +1,14 @@
+{
+  "name": "Goals_BMI_Calculator",
+  "short_name": "Goals BMI",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#06152D",
+  "theme_color": "#0B5ED7",
+  "description": "Offline BMI calculator and running tracker.",
+  "icons": [
+    {"src":"./icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"./icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}

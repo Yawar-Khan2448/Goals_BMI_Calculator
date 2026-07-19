@@ -1,0 +1,6 @@
+@echo off
+echo Installing dependencies...
+call npm install
+if errorlevel 1 exit /b 1
+echo Starting offline-capable development server...
+call npm run dev -- --host 127.0.0.1

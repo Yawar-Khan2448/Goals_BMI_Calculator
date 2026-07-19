@@ -1,0 +1,7 @@
+1. Install Node.js.
+2. Open this folder in Terminal/CMD.
+3. Run: npm install
+4. Run: npm run dev
+5. Open the localhost address shown by Vite.
+
+Do NOT double-click index.html in the source folder.

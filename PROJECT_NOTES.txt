@@ -1,0 +1,6 @@
+Goals_BMI_Calculator
+Package: com.yawar.bmi
+Architecture: React + Vite + Capacitor
+Offline: Service worker + localStorage + GPS route recording
+Reference dashboard: blue/white glass UI, rain, water/sea footer, BMI, chart, history, run tracker.
+Generated: source project scaffold.

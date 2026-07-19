@@ -1,0 +1,11 @@
+{
+  "appName": "Goals_BMI_Calculator",
+  "packageName": "com.yawar.bmi",
+  "category": "Health & Fitness",
+  "offlineFirst": true,
+  "usesLocationFor": "Active running tracker GPS route recording",
+  "requiresAccount": false,
+  "privacyPolicyInApp": true,
+  "disclaimerInApp": true,
+  "historyLimit": 10
+}
