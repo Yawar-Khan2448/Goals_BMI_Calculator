@@ -2,6 +2,12 @@ workflows:
   capacitor-android:
     name: Capacitor Android Release
     instance_type: mac_mini_m2
+    environment:
+      vars:
+        CM_KEYSTORE_REFERENCE: bmi-key
+        CM_KEY_ALIAS: upload
+        CM_KEYSTORE_PASSWORD: $CM_KEYSTORE_PASSWORD
+        CM_KEY_PASSWORD: $CM_KEY_PASSWORD
     scripts:
       - name: Install deps
         script: npm install
@@ -13,9 +19,3 @@ workflows:
         script: cd android && ./gradlew bundleRelease
     artifacts:
       - android/app/build/outputs/bundle/release/*.aab
-    environment:
-      android_signing:
-        - keystore: $CM_KEYSTORE
-          keystore_password: $CM_KEYSTORE_PASSWORD
-          key_alias: $CM_KEY_ALIAS
-          key_password: $CM_KEY_PASSWORD
