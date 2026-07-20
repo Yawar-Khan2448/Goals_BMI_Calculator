@@ -36,3 +36,22 @@ This policy may be updated when the app's data practices change.
 
 ## Contact
 For privacy questions, contact the developer through the contact details provided on the app's Google Play listing.
+Goals BMI Calculator Privacy Policy
+
+Yawar app built the Goals BMI Calculator app as a Free app. 
+This SERVICE is provided at no cost and is intended for use as is.
+
+Information Collection and Use:
+This app does not collect, store, or transmit any personal data to external servers.
+All BMI calculations and health data are stored locally on your device only.
+
+Data Safety:
+- No data is collected
+- No data is shared
+- No data is transmitted
+
+Changes to This Privacy Policy:
+We may update our Privacy Policy. You will be notified of any changes.
+
+Contact Us:
+If you have any questions, contact us at: yawar2448@gmail.com

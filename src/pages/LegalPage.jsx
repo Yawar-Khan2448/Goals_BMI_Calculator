@@ -9,7 +9,26 @@ const content = {
   },
   privacy: {
     icon: LockKeyhole, title:"Privacy Policy",
-    body:<><p>We respect your privacy. This app does not require an account and does not intentionally upload your BMI or running records to a server.</p><p>When you use running tracking, your device location may be accessed to record your route. Route points are stored locally on your device.</p><p>You can remove locally stored information by clearing the application's data from your device settings.</p></>
+    body:<>
+      <p>Tap the button below to read our full Privacy Policy:</p>
+      <a 
+        href="https://yawar-khan2448.github.io/goals-bmi-privacy/privacy.html" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        style={{
+          display: 'inline-block',
+          padding: '12px 24px', 
+          background: '#007bff', 
+          color: 'white', 
+          textDecoration: 'none', 
+          borderRadius: '8px',
+          fontWeight: 'bold',
+          marginTop: '10px'
+        }}
+      >
+        View Privacy Policy
+      </a>
+    </>,
   },
   disclaimer: {
     icon: ShieldCheck, title:"Disclaimer",

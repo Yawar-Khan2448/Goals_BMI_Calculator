@@ -3,7 +3,12 @@ workflows:
     name: Android Release Build
     max_build_duration: 60
     environment:
-      java: 21   # <-- Yahan 21 kar do
+      java: 21
+      android_signing:
+        - keystore: $CM_KEYSTORE
+          keystore_password: $CM_KEYSTORE_PASSWORD
+          key_alias: $CM_KEY_ALIAS
+          key_password: $CM_KEY_PASSWORD
     scripts:
       - name: Install dependencies
         script: npm install
@@ -21,4 +26,4 @@ workflows:
     publishing:
       email:
         recipients:
-          - yawar.khan2448@gmail.com
+          - yawar2448@gmail.com  
