@@ -4,7 +4,7 @@ workflows:
     instance_type: mac_mini_m2
     environment:
       xcode: latest
-      java: 17
+      java: 21  # <-- 17 ki jagah 21 kar do
       vars:
         CM_KEYSTORE_REFERENCE: bmi-key
         CM_KEY_ALIAS: upload
