@@ -11,30 +11,22 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
-             // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
-             // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
              ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
 
     signingConfigs {
         release {
-            def keystorePath = System.getenv("CM_KEYSTORE_PATH")
-            if (keystorePath && file(keystorePath).exists()) {
-                storeFile file(keystorePath)
-                storePassword System.getenv("CM_KEYSTORE_PASSWORD")
-                keyAlias System.getenv("CM_KEY_ALIAS")
-                keyPassword System.getenv("CM_KEY_PASSWORD")
-            }
+            storeFile file("your-release-key.jks")   // ← APNA KEYSTORE FILE PATH DAALEIN
+            storePassword "Yawar24@"
+            keyAlias "YOUR_KEY_ALIAS"                // ← APNA KEY ALIAS DAALEIN
+            keyPassword "Yawar24@"
         }
     }
     
     buildTypes {
         release {
-            // Only use release signing if the keystore file actually exists
-            if (signingConfigs.release.storeFile != null) {
-                signingConfig signingConfigs.release
-            }
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
         }
@@ -42,7 +34,7 @@ android {
             signingConfig signingConfigs.debug
         }
     }
-} // <-- android ka close
+}
 
 repositories {
     flatDir{
