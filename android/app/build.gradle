@@ -16,13 +16,28 @@ android {
             ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
-    buildTypes {
+
+    // YE YAHAN ANDAR AAYEGA
+    signingConfigs {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            storeFile file(System.getenv("CM_KEYSTORE_PATH") ?: "debug.keystore")
+            storePassword System.getenv("CM_KEYSTORE_PASSWORD")
+            keyAlias System.getenv("CM_KEY_ALIAS")
+            keyPassword System.getenv("CM_KEY_PASSWORD")
         }
     }
-}
+    
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+} // <-- android ka close
 
 repositories {
     flatDir{
@@ -51,19 +66,4 @@ try {
     }
 } catch(Exception e) {
     logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
-}
-    signingConfigs {
-    release {
-        storeFile file(System.getenv("CM_KEYSTORE_PATH") ?: "debug.keystore")
-        storePassword System.getenv("CM_KEYSTORE_PASSWORD")
-        keyAlias System.getenv("CM_KEY_ALIAS")
-        keyPassword System.getenv("CM_KEY_PASSWORD")
-    }
-}
-buildTypes {
-    release {
-        signingConfig signingConfigs.release
-        minifyEnabled false
-        proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
-    }
 }
